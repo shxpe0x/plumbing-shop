@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Прячем элементы с x-cloak до инициализации Alpine.js, чтобы избежать
+   мигания свёрнутых меню при первом рендере. */
+[x-cloak] {
+    display: none !important;
+}
