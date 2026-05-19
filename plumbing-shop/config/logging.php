@@ -127,6 +127,13 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
+        'missing_translations' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/missing-translations.log'),
+            'level' => env('LOG_MISSING_TRANSLATIONS_LEVEL', 'warning'),
+            'replace_placeholders' => true,
+        ],
+
     ],
 
 ];
