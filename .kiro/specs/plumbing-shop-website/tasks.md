@@ -10,7 +10,7 @@
 
 ## Tasks
 
-- [ ] 1. Каркас проекта и базовая инфраструктура
+- [x] 1. Каркас проекта и базовая инфраструктура
   - [x] 1.1 Инициализировать Laravel 11 + Breeze (Blade-стек) и зафиксировать зависимости
     - Создать новый проект `laravel/laravel:^11`, установить `laravel/breeze` (stack: blade), `tailwindcss`, `alpinejs`, `intervention/image:^3`, `cocur/slugify`, `spatie/laravel-sitemap`, `giorgiosironi/eris` (require-dev)
     - Запустить `php artisan breeze:install blade`, выполнить миграции по умолчанию
@@ -25,23 +25,23 @@
     - Подключить Alpine.js в `resources/js/app.js`, инициализировать в layout
     - _Requirements: 23.3, 25.1, 25.3, 25.6_
 
-  - [ ] 1.3 Создать языковые файлы и хелперы локализации
+  - [x] 1.3 Создать языковые файлы и хелперы локализации
     - Создать `resources/lang/ru/{auth,validation,pagination,passwords,app}.php` и `resources/lang/ru.json`
     - Реализовать middleware `LogMissingTranslations`, регистрирующий отсутствующие ключи в `storage/logs/missing-translations.log`
     - Зарегистрировать макросы `Carbon::macro('toRu')` (`d.m.Y`) и `Carbon::macro('toRuDateTime')` (`d.m.Y H:i`) в `AppServiceProvider`
     - _Requirements: 26.1, 26.3, 26.4_
 
-  - [ ] 1.4 Реализовать класс `App\Support\Money` и хелпер `format_price`
+  - [x] 1.4 Реализовать класс `App\Support\Money` и хелпер `format_price`
     - Хранение `kopecks: int`, методы `plus/minus/multipliedBy/format`, фабрики `fromRubles`/`fromKopecks`
     - Хелпер `format_price(Money $m): string` форматирует как «1 234,56 ₽» (неразрывный пробел `\u{00A0}` как разделитель тысяч и перед символом ₽)
     - _Requirements: 26.2, 4.1, 5.2_
 
-  - [ ]* 1.5 Property-тест формата денежных сумм
+  - [x]* 1.5 Property-тест формата денежных сумм
     - **Property 13: Round-trip формата денежных сумм**
     - **Validates: Requirements 26.2, 4.1, 5.2**
     - В `tests/Property/MoneyFormatPropertyTest.php` сгенерировать `m ∈ [0; 999_999_999]` копеек, проверить шаблон, наличие неразрывного пробела, ровно 2 цифры после запятой, окончание на `\u{00A0}₽`, round-trip `parse_price(format_price(Money(m))) === m`
 
-  - [ ] 1.6 Создать структуру каталогов и базовые namespace-ы
+  - [x] 1.6 Создать структуру каталогов и базовые namespace-ы
     - `app/Http/Controllers/{Public,Auth,Admin}`, `app/Http/Middleware`, `app/Http/Requests`, `app/Services`, `app/Policies`, `app/View/Components`, `app/Support`, `app/Exceptions/Domain`
     - Заглушки `routes/web.php` и `routes/admin.php` (последний подключается с префиксом `/admin`)
 
