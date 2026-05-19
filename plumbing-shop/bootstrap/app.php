@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\LogMissingTranslations;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -20,7 +21,10 @@ return Application::configure(basePath: dirname(__DIR__))
         },
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        // Регистрируем обработчик отсутствующих переводов на каждом
+        // web-запросе — это даёт нам контекст текущего URL запроса в логах
+        // (Req 26.4).
+        $middleware->appendToGroup('web', LogMissingTranslations::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
