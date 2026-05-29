@@ -1,20 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\SectionController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Маршруты административной панели
-|--------------------------------------------------------------------------
-|
-| Этот файл подключается из bootstrap/app.php через withRouting(then: ...)
-| с префиксом «/admin» и middleware-группой «web».
-| Auth- и role-middleware появятся в задачах 3.7 и 12.1.
-| CRUD-маршруты добавляются в задачах 12.x–14.x.
-|
-*/
+Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
 
-Route::get('/', function () {
-    // Заглушка дашборда. Реальная реализация — задача 12.1.
-    return view('admin.dashboard');
-})->name('admin.dashboard');
+Route::get('/{section}', [SectionController::class, 'show'])
+    ->where('section', 'products|categories|orders|promotions|banners|pages|articles|reviews|users|settings|delivery-methods|payment-methods|regions|tariffs|callbacks|chat|reports')
+    ->name('admin.section');

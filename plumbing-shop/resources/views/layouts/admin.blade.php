@@ -31,7 +31,7 @@
                :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"
                aria-label="Боковое меню админ-панели">
             <div class="flex items-center justify-between h-16 px-4 border-b border-gray-800">
-                <a href="{{ url('/admin') }}"
+                <a href="{{ route('admin.dashboard') }}"
                    class="inline-flex items-center min-h-touch text-lg font-bold text-white hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
                     Админ-панель
                 </a>
@@ -48,7 +48,7 @@
 
             <nav class="px-2 py-4 overflow-y-auto" aria-label="Разделы админ-панели">
                 <ul class="space-y-1">
-                    <li><a href="{{ url('/admin') }}" class="flex items-center min-h-touch px-3 py-2 rounded-md text-sm text-gray-200 hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">Дашборд</a></li>
+                    <li><a href="{{ route('admin.dashboard') }}" class="flex items-center min-h-touch px-3 py-2 rounded-md text-sm text-gray-200 hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">Дашборд</a></li>
                     <li><a href="{{ url('/admin/products') }}" class="flex items-center min-h-touch px-3 py-2 rounded-md text-sm text-gray-200 hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">Товары</a></li>
                     <li><a href="{{ url('/admin/categories') }}" class="flex items-center min-h-touch px-3 py-2 rounded-md text-sm text-gray-200 hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">Категории</a></li>
                     <li><a href="{{ url('/admin/orders') }}" class="flex items-center min-h-touch px-3 py-2 rounded-md text-sm text-gray-200 hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">Заказы</a></li>

@@ -46,14 +46,14 @@
                 {{-- Главное горизонтальное меню (md+) --}}
                 <nav class="hidden md:block" aria-label="Главное меню">
                     <ul class="flex items-center gap-1 lg:gap-2">
-                        <li><a href="{{ url('/') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Главная</a></li>
-                        <li><a href="{{ url('/catalog') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Каталог</a></li>
-                        <li><a href="{{ url('/about') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">О нас</a></li>
-                        <li><a href="{{ url('/delivery') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Доставка</a></li>
-                        <li><a href="{{ url('/warranty') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Гарантия</a></li>
-                        <li><a href="{{ url('/contacts') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Контакты</a></li>
-                        <li><a href="{{ url('/blog') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Блог</a></li>
-                        <li><a href="{{ url('/reviews') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Отзывы</a></li>
+                        <li><a href="{{ route('home') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.home') }}</a></li>
+                        <li><a href="{{ route('catalog') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.catalog') }}</a></li>
+                        <li><a href="{{ route('about') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.about') }}</a></li>
+                        <li><a href="{{ route('delivery') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Доставка</a></li>
+                        <li><a href="{{ route('warranty') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Гарантия</a></li>
+                        <li><a href="{{ route('contacts') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.contacts') }}</a></li>
+                        <li><a href="{{ route('blog') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.blog') }}</a></li>
+                        <li><a href="{{ route('reviews') }}" class="inline-flex items-center min-h-touch px-3 py-2 rounded-md text-sm lg:text-base text-gray-700 hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.reviews') }}</a></li>
                     </ul>
                 </nav>
 
@@ -81,14 +81,14 @@
                  x-transition
                  aria-label="Мобильное меню">
                 <ul class="py-2">
-                    <li><a href="{{ url('/') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Главная</a></li>
-                    <li><a href="{{ url('/catalog') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Каталог</a></li>
-                    <li><a href="{{ url('/about') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">О нас</a></li>
-                    <li><a href="{{ url('/delivery') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Доставка</a></li>
-                    <li><a href="{{ url('/warranty') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Гарантия</a></li>
-                    <li><a href="{{ url('/contacts') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Контакты</a></li>
-                    <li><a href="{{ url('/blog') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Блог</a></li>
-                    <li><a href="{{ url('/reviews') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Отзывы</a></li>
+                    <li><a href="{{ route('home') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.home') }}</a></li>
+                    <li><a href="{{ route('catalog') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.catalog') }}</a></li>
+                    <li><a href="{{ route('about') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.about') }}</a></li>
+                    <li><a href="{{ route('delivery') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Доставка</a></li>
+                    <li><a href="{{ route('warranty') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Гарантия</a></li>
+                    <li><a href="{{ route('contacts') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.contacts') }}</a></li>
+                    <li><a href="{{ route('blog') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.blog') }}</a></li>
+                    <li><a href="{{ route('reviews') }}" class="flex items-center min-h-touch px-4 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ __('app.navigation.reviews') }}</a></li>
                 </ul>
             </nav>
         </div>
@@ -129,9 +129,10 @@
                 <div>
                     <p class="text-sm font-semibold text-white">Информация</p>
                     <ul class="mt-2 space-y-1 text-sm text-gray-300">
-                        <li><a href="{{ url('/about') }}" class="inline-flex items-center min-h-touch hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">О нас</a></li>
-                        <li><a href="{{ url('/delivery') }}" class="inline-flex items-center min-h-touch hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">Доставка и оплата</a></li>
-                        <li><a href="{{ url('/warranty') }}" class="inline-flex items-center min-h-touch hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">Гарантия и возврат</a></li>
+                        <li><a href="{{ route('about') }}" class="inline-flex items-center min-h-touch hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">{{ __('app.navigation.about') }}</a></li>
+                        <li><a href="{{ route('delivery') }}" class="inline-flex items-center min-h-touch hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">{{ __('app.navigation.delivery') }}</a></li>
+                        <li><a href="{{ route('warranty') }}" class="inline-flex items-center min-h-touch hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">{{ __('app.navigation.warranty') }}</a></li>
+                        <li><a href="{{ route('admin.dashboard') }}" class="inline-flex items-center min-h-touch hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">{{ __('app.navigation.admin') }}</a></li>
                     </ul>
                 </div>
             </div>
